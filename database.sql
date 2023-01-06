@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2022 at 10:10 AM
+-- Generation Time: Jan 06, 2023 at 08:17 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -70,6 +70,20 @@ CREATE TABLE `tb_pesanan` (
   `pilihan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_user`
+--
+
+CREATE TABLE `tb_user` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `role_id` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Indexes for dumped tables
 --
@@ -93,6 +107,12 @@ ALTER TABLE `tb_pesanan`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tb_user`
+--
+ALTER TABLE `tb_user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -112,6 +132,12 @@ ALTER TABLE `tb_invoice`
 -- AUTO_INCREMENT for table `tb_pesanan`
 --
 ALTER TABLE `tb_pesanan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tb_user`
+--
+ALTER TABLE `tb_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
