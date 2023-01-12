@@ -42,4 +42,15 @@ class Data_barang extends CI_Controller{
         redirect('admin/data_barang/index');
 
     }
+
+    public function edit($id)
+    {
+        $where = array ('id_brg' =>$id);
+        $data['barang'] = $this->model_barang->edit_barang($where, 
+            'tb_barang')->result();
+        $this->load->view('templates_admin/header');
+        $this->load->view('templates_admin/sidebar');
+        $this->load->view('admin/edit_barang',$data);
+        $this->load->view('templates_admin/footer');
+    }
 }
