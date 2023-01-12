@@ -63,7 +63,13 @@
                 
 
             </form>
-                    
+                
+            <?php  
+                }else
+                {
+                    echo "<h5>Keranjang Belanja Anda Kosong";
+                }
+            ?>
         
         </div>
         <div class="col-md-2"></div>
