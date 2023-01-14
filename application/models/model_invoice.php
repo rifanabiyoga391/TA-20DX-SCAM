@@ -51,4 +51,14 @@ class Model_invoice extends CI_Model{
             return false;
         }
     }
+    
+    public function ambil_id_pesanan($id_invoice)
+    {
+        $result = $this->db->where('id_invoice', $id_invoice)->get('tb_pesanan');
+        if($result->num_rows()> 0){
+            return $result->result();
+        }else{
+            return false;
+        }
+    }
 }
