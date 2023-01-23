@@ -28,7 +28,8 @@ class Dashboard extends CI_Controller{
     );
     
     $this->cart->insert($data);
-    redirect('welcome');
+    redirect('Welcome');
+
 
     }
 
@@ -40,12 +41,14 @@ class Dashboard extends CI_Controller{
         $this->load->view('templates/footer');
     }
 
+
     
     public function hapus_keranjang()
     {
         $this->cart->destroy();
-        redirect('welcome');
+        redirect('Welcome');
     }
+
 
     public function pembayaran()
     {
@@ -54,6 +57,7 @@ class Dashboard extends CI_Controller{
         $this->load->view('pembayaran');
         $this->load->view('templates/footer');
     }
+
     
     public function proses_pesanan()
     {
@@ -68,6 +72,7 @@ class Dashboard extends CI_Controller{
             echo "Maaf, Pesanan Anda Gagal diproses! ";
         }  
     }
+    
     
     public function detail($id_brg)
     {

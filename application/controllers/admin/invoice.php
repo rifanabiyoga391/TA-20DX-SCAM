@@ -16,6 +16,7 @@ class Invoice extends CI_Controller{
         }
     }
 
+
     public function index()
     {
         $data['invoice'] = $this->model_invoice->tampil_data();
@@ -24,6 +25,7 @@ class Invoice extends CI_Controller{
         $this->load->view('admin/invoice',$data);
         $this->load->view('templates_admin/footer');
     }
+    
     
     public function detail($id_invoice)
     {

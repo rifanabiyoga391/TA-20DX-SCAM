@@ -23,6 +23,8 @@ class Data_barang extends CI_Controller{
         $this->load->view('admin/Data_barang',$data);
         $this->load->view('templates_admin/footer');
     }
+
+
     public function tambah_aksi()
     {
         $nama_brg = $this->input->post('nama_brg');
@@ -68,6 +70,7 @@ class Data_barang extends CI_Controller{
         $this->load->view('templates_admin/footer');
     }
 
+    
     public function update()
     {
         $id             = $this->input->post('id_brg');
